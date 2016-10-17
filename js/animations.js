@@ -57,7 +57,6 @@ $(document).ready(function(){
 	
 //info toggle for created tweets. click and hover.
 	$('#main #profile-summary').click(function(e){ 
-		console.log("CMON FUCKIN WORK ASDIUFH")
 		if($(e.target).is('.tweet-compose')){
       e.preventDefault();
       return;
