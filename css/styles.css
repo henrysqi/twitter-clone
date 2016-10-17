@@ -97,7 +97,7 @@ body {
 	}
 		#profile-summary .avatar {
 			position: absolute;
-			top: 0;.twe
+			top: 0;
 			left: 0;
 		}
 		#profile-summary .content {
@@ -261,16 +261,14 @@ body {
 
 /* ================================================== */
  
-#hidden-tweet-actions {
-		text-align: right;
-	}
-		#hidden-tweet-actions ul {
-			list-style-type: none;
-		}
-			#hidden-tweet-actions li {
-				display: inline-block;
-				font-size: 12px;
-				color: #2FC2EF;
-				cursor: pointer;
-				margin-right: 2px;
-			}
+#own-tweet-actions {
+	display: none;
+}
+
+#own-stats {
+	display: none;
+}
+
+#own-reply {
+	display: none;
+}

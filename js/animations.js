@@ -2,7 +2,6 @@ $(document).ready(function(){
 	
 	$('#tweet-submit').hide();
 	$('#char-count').hide();
-	$('#hidden-tweet-actions').hide();
 	
 	$('.tweet-compose').click(function(){
 		$('.tweet-compose').css('height', '5em');
@@ -27,8 +26,10 @@ $(document).ready(function(){
 		var profileClone = $('#profile-summary').clone();
 		var tweet = $('.tweet-compose').val();
 		
-	  profileClone.find('#hidden-tweet').html(tweet);
-		profileClone.find('#hidden-tweet-actions').show();
+	  profileClone.find('#own-tweet').html(tweet);
+		profileClone.find('#own-tweet-actions').show();
+		profileClone.find('#own-stats').show();
+		profileClone.find('#own-reply').show();
 
 		
 	  $('#stream').prepend(profileClone);
@@ -36,10 +37,7 @@ $(document).ready(function(){
 		
 	});
 	
-	
-	
-	
-	
+
 	
 	
 	
