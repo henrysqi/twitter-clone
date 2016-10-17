@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$('#tweet-submit').hide();
 	$('#char-count').hide();
 	
-	$('.tweet-compose').click(function(){
+	$('#tweet-content .tweet-compose').click(function(){
 		$('.tweet-compose').css('height', '5em');
 		$('#tweet-submit').show();
 		$('#char-count').show();
@@ -24,7 +24,9 @@ $(document).ready(function(){
 	
 	$('#tweet-submit').click(function(){
 		var profileClone = $('#profile-summary').clone();
-		var tweet = $('.tweet-compose').val();
+		var tweet = $('#left-tweet').val();
+		
+		console.log(tweet)
 		
 	  profileClone.find('#own-tweet').html(tweet);
 		profileClone.find('#own-tweet-actions').show();
@@ -33,10 +35,24 @@ $(document).ready(function(){
 
 		
 	  $('#stream').prepend(profileClone);
-		
-		
 	});
 	
+	
+	$('.tweet-actions').hide();
+	$('.stats').hide();
+	$('.reply').hide();
+	
+	$('#stream .tweet').click(function(e){ 
+		if($(e.target).is('.tweet-compose')){
+      e.preventDefault();
+      return;
+    }
+		$(this).find($('#main .stats')).toggle(1000);
+		$(this).find($('#main .reply')).toggle(1000);	
+	})
+	$('#stream .tweet').hover(function(){
+		$(this).find($('#main .tweet-actions')).toggle(); 
+	})
 
 	
 	
