@@ -280,7 +280,34 @@ body {
 	font-weight: normal;
 }
 
-#profile-summary {
+
+
+#own-stats .retweets p{
+	font-size: 10px;
+	margin-left: 0px;
+}
+
+#own-stats .favorites p{
+	font-size: 10px;
+	margin-left: 0px;
+}
+
+#own-stats .retweets{
+
+	padding-left: 0px !important;
+}
+
+#own-stats .favorites{
 	
+}
+
+#own-stats .num-retweets{
+	font-weight: bold !important;
+	font-size: 14px !important;
+}
+
+#own-stats .num-favorites{
+	font-weight: bold !important;
+	font-size: 14px !important;
 }
 

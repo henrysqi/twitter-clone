@@ -53,7 +53,6 @@ $(document).ready(function(){
 		
 		//info toggle for created tweets. click and hover.
 		profileClone.find('.content').click(function(e){
-			console.log("asdasdsadsadasdsadsa")
 			if($(e.target).is('.tweet-compose')){
 				e.preventDefault();
 				return;
@@ -61,7 +60,6 @@ $(document).ready(function(){
 			profileClone.find('#own-stats').toggle(500);
 			profileClone.find('#own-reply').toggle(500);
 		})
-		
 		profileClone.find('.content').hover(function(){
 			profileClone.find('#own-tweet-actions').toggle();
 		})
