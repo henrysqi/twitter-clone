@@ -48,33 +48,29 @@ $(document).ready(function(){
 		var tweet = $('#left-tweet').val();
 		
 	  profileClone.find('#own-tweet').html(tweet);
-//		profileClone.find('#own-tweet-actions').show();
-//		profileClone.find('#own-stats').show();
-//		profileClone.find('#own-reply').show();
 
-	  $('#stream').prepend(profileClone);
+	  $('#stream').prepend(profileClone);	
+		
+		//info toggle for created tweets. click and hover.
+		profileClone.find('.content').click(function(e){
+			console.log("asdasdsadsadasdsadsa")
+			if($(e.target).is('.tweet-compose')){
+				e.preventDefault();
+				return;
+			}
+			profileClone.find('#own-stats').toggle(500);
+			profileClone.find('#own-reply').toggle(500);
+		})
+		
+		profileClone.find('.content').hover(function(){
+			profileClone.find('#own-tweet-actions').toggle();
+		})
+		
 	});
 	
-//info toggle for created tweets. click and hover.
-	$('#main #profile-summary').click(function(e){ 
-		if($(e.target).is('.tweet-compose')){
-      e.preventDefault();
-      return;
-    }
-		$(this).find($('#own-stats')).toggle(500);
-		$(this).find($('#own-reply')).toggle(500);	
-	})
-	$('#stream #profile-summary').hover(function(){
-		$(this).find($('#own-tweet-actions')).toggle(); 
-	})
+	
 
 
-	
-	
-	
-	
-	
-	
 	
 	
 	
